@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { snsFormats } from '../../../data/mock'
-import { SNSFormat } from '../../../types'
+import { snsFormats } from '../../data/mock'
+import { SNSFormat } from '../../types'
 
 const platformIcons: Record<string, string> = {
   Instagram: '📸',

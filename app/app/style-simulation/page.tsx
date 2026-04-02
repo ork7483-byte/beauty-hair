@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { hairStyles, femaleModels } from '../../../data/mock'
-import { HairStylePreset } from '../../../types'
+import { hairStyles, femaleModels } from '../../data/mock'
+import { HairStylePreset } from '../../types'
 
 type ModelSource = 'ai' | 'customer'
 type HairCategory = 'cut' | 'perm' | 'color' | 'upstyle'
