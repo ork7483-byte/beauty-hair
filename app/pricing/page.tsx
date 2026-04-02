@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { PricingCards } from '../page';
+import PricingCards from '../components/PricingCards';
 
 const faqs = [
   {

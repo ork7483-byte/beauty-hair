@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
+import PricingCards from './components/PricingCards';
 import { galleryItems, galleryCategories, pricingPlans, testimonials, hairFeatures } from './data/mock';
 
 // ─── CountUp hook ──────────────────────────────────────────────────────────────
@@ -638,7 +639,7 @@ function SocialProofSection() {
 }
 
 // ─── Section 7: Pricing ────────────────────────────────────────────────────────
-export function PricingCards({ showYearly }: { showYearly: boolean }) {
+function PricingCardsInline({ showYearly }: { showYearly: boolean }) {
   return (
     <div className="grid md:grid-cols-3 gap-6 items-start">
       {pricingPlans.map((plan, i) => (
