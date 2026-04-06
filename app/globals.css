@@ -1,31 +1,264 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #FAFAFA;
+  /* ── Primary (원본: --color-primary: 16,90,255 → #105AFF) ── */
+  --color-primary: #4F46E5;
+  --color-primary-hover: #4338CA;
+  --color-primary-light: #EEF2FF;
+  --color-primary-100: #E0E7FF;
+  --color-primary-200: #C7D2FE;
+  --color-primary-300: #A5B4FC;
+
+  /* ── Background ── */
+  --color-bg-primary: #FFFFFF;
   --color-bg-surface: #FFFFFF;
-  --color-bg-secondary: #FFF1F2;
-  --color-bg-dark: #1C1917;
+  --color-bg-secondary: #F8FAFC;
+  --color-bg-dark: #111827;
+  --color-bg-dark-alt: #1E293B;
+
+  /* ── Text ── */
   --color-text-primary: #111827;
-  --color-text-secondary: #6B7280;
+  --color-text-secondary: #4B5563;
   --color-text-muted: #9CA3AF;
+  --color-text-light: #6B7280;
+
+  /* ── Border ── */
   --color-border: #E5E7EB;
   --color-border-subtle: #F3F4F6;
-  --color-accent: #E11D48;
-  --color-accent-hover: #BE185D;
-  --color-accent-bg: #FFF1F2;
-  --color-accent-light: #FDA4AF;
-  --color-gold: #F59E0B;
-  --color-gold-bg: #FFFBEB;
+
+  /* ── Accent ── */
+  --color-accent: #4F46E5;
+  --color-accent-hover: #4338CA;
+
+  /* ── Status ── */
   --color-success: #059669;
   --color-success-bg: #ECFDF5;
   --color-error: #DC2626;
-  --color-error-bg: #FEF2F2;
-  --color-info: #2563EB;
-  --color-info-bg: #EFF6FF;
+  --color-warning: #F59E0B;
+
+  /* ── Layout (원본 데이터 기반) ── */
+  --header-height: 64px;
+  --nav-width: 252px;
 }
 
+/* ── Base ── */
 body {
-  background-color: #FAFAFA;
-  color: #111827;
+  background-color: #FFFFFF;
+  color: #0F0F0F;
   font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* ── Scroll ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Typography System (원본 젝터스튜디오 데이터 기반)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Display ── */
+.text-display-2 {
+  font-size: 2.25rem;    /* 36px */
+  line-height: 150%;
+  letter-spacing: -0.89%;
+  font-weight: 700;
+}
+
+/* ── Heading ── */
+.text-heading-1 {
+  font-size: 2rem;       /* 32px */
+  line-height: 140%;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+}
+
+.text-heading-2 {
+  font-size: 1.75rem;    /* 28px */
+  line-height: 140%;
+  letter-spacing: -0.57%;
+  font-weight: 600;
+}
+
+.text-heading-3 {
+  font-size: 1.5rem;     /* 24px */
+  line-height: 140%;
+  letter-spacing: -0.67%;
+  font-weight: 600;
+}
+
+.text-heading-4 {
+  font-size: 1.25rem;    /* 20px */
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.text-heading-5 {
+  font-size: 1.125rem;   /* 18px */
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+/* ── Body ── */
+.text-body-1-regular {
+  font-size: 1.125rem;   /* 18px */
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-body-1-medium {
+  font-size: 1.125rem;   /* 18px */
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.text-body-2-regular {
+  font-size: 1rem;       /* 16px */
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-body-2-medium {
+  font-size: 1rem;       /* 16px */
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.text-body-3-regular {
+  font-size: 0.875rem;   /* 14px */
+  line-height: 140%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-body-3-medium {
+  font-size: 0.875rem;   /* 14px */
+  line-height: 140%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.text-body-4-medium {
+  font-size: 0.75rem;    /* 12px */
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+/* ── Label ── */
+.text-label-1 {
+  font-size: 1rem;       /* 16px */
+  line-height: 140%;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.text-label-2 {
+  font-size: 0.875rem;   /* 14px */
+  line-height: 140%;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.text-label-3 {
+  font-size: 0.75rem;    /* 12px */
+  line-height: 130%;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+/* ── Caption ── */
+.text-caption-1 {
+  font-size: 0.75rem;    /* 12px */
+  line-height: 130%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-caption-2 {
+  font-size: 0.625rem;   /* 10px */
+  line-height: 140%;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Animations
+   ═══════════════════════════════════════════════════════════════════════ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fadeInUp { animation: fadeInUp 0.6s ease-out forwards; }
+.animate-fadeIn { animation: fadeIn 0.5s ease-out forwards; }
+.animate-slideInLeft { animation: slideInLeft 0.6s ease-out forwards; }
+.animate-slideInRight { animation: slideInRight 0.6s ease-out forwards; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.animate-slideUp { animation: slideUp 0.3s ease-out forwards; }
+
+/* ── Stagger delays ── */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; }
+
+/* ── No scrollbar (원본: scrollbar-hide) ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
